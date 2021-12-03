@@ -13,17 +13,280 @@
     padding: 0px;
 }
 
-/* Handy */
+.navbar2{
+    color: rgb(216, 216, 216); 
+    margin-right: 10px; 
+}
 
+.aboutme{
+    text-decoration: none;
+}
+
+.mywork{
+    text-decoration: underline;
+}
+
+.social{
+    text-decoration: none;
+}
+
+.navbar2:hover {
+    color: rgb(167, 167, 167);
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 250px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.content1:hover,.content2:hover,.content3:hover,.content4:hover,.content5:hover,.content6:hover { 
+    transform: scale(1.05);
+    transition: 0.9s;
+    box-shadow: 0px 0px 25px 3px white;
+}
+
+.content1,.content2,.content3,.content4,.content5,.content6 { 
+    transition: 0.6s;
+}
+
+/* Handy */
 
 body {
     font-family: mc2;
     background-color: #171717; 
-    color: white;
-    background-image: url(../images/space-export.png);
+    color: rgb(216, 216, 216);
+    background-image: url(../images/background.gif);
     background-size: 100%;
-
+    transition: 0.9s;
 }
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header1 header1 header1"
+    "navbar navbar navbar"
+    "header2 header2 header2"
+    "content1 content1 content1"
+    "content2 content2 content2"
+    "content3 content3 content3"
+    "content4 content4 content4"
+    "content5 content5 content5"
+    "content6 content6 content6"
+    "madeby madeby madeby";
+}
+
+
+.span1 {
+    margin-top: 10px;
+    background-color: rgba(23,23,23,0.6);
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar {
+    grid-area: navbar;
+    justify-self: center;
+}
+
+.navbar2 {
+    background-color: rgba(23,23,23,0.6);
+}
+
+.madeby {
+    grid-area: madeby;
+    justify-self: center;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.backmadeby {
+    font-size: 10px;
+    background-color: rgba(23,23,23,0.6);
+}
+
+.promax {
+    font-size: 12px;
+    background-color: rgba(23,23,23,0.6);
+    color: rgb(216, 216, 216);
+}
+
+.header1 {
+    grid-area: header1;
+    font-size: 50px;
+    justify-self: center;
+    
+}
+
+.header2 {
+    grid-area: header2;
+    justify-self: center;
+    font-size: 25px;
+    margin-top: 30px;
+    background-color: rgba(23,23,23,0.6);
+}
+
+.model1 {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; 
+    border-top: 1px solid #171717;
+}
+
+th, td {
+    border-bottom:1px solid #171717;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    border-right:1px solid #171717;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bottom-table {
+    border-bottom:0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text1 {
+    float: right;
+    color: black;
+}
+
+.content1,.content2,.content3,.content4,.content5,.content6 {
+    font-size: 10px;
+}
+
+.content1 {
+    grid-area: content1;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+/* Model 2 */
+
+.content2 {
+    grid-area: content2;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+
+
+/* Model 3 */
+
+.content3 {
+    grid-area: content3;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+
+/* Model 4 */
+
+.content4 {
+    grid-area: content4;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+
+/* Model 5 */
+
+.content5 {
+    grid-area: content5;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+
+/* Model 6 */
+
+.content6 {
+    grid-area: content6;
+    justify-self: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+}
+
+table {
+    width: 200px;
+}
+
+.modelframe {
+    width: 100%;
+    height: 100px;
+    border: 0px;
+}
+
+
+@media screen and (min-width: 400px) {
+ 
+
+
 
 .grid {
     margin-top: 20px;
@@ -75,7 +338,7 @@ body {
 .promax {
     font-size: 12px;
     background-color: rgba(23,23,23,0.6);
-    color: white;
+    color: rgb(216, 216, 216);
 }
 
 .header1 {
@@ -97,12 +360,6 @@ body {
     text-align: center;
 }
 
-table, th, td {
-    border:1px solid #171717;
-    border-collapse: collapse;
-    text-align: center;
-    vertical-align: middle;
-  }
 
 .text1 {
     float: right;
@@ -112,11 +369,12 @@ table, th, td {
 .content1 {
     grid-area: content1;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
 /* Model 2 */
@@ -124,11 +382,12 @@ table, th, td {
 .content2 {
     grid-area: content2;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
 
@@ -138,11 +397,12 @@ table, th, td {
 .content3 {
     grid-area: content3;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
 
@@ -151,11 +411,12 @@ table, th, td {
 .content4 {
     grid-area: content4;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
 
@@ -164,11 +425,12 @@ table, th, td {
 .content5 {
     grid-area: content5;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
 
@@ -177,24 +439,33 @@ table, th, td {
 .content6 {
     grid-area: content6;
     justify-self: center;
-    background-color: white;
+    background-color: rgb(216, 216, 216);
     border-radius: 12px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    width: 350px;
 }
 
+.content1,.content2,.content3,.content4,.content5,.content6 {
+    font-size: 15px;
+}
+
+.modelframe {
+    width: 100%;
+    height: 150px;
+    border: 0px;
+}
+
+table {
+    width: 350px;
+}
+
+}
 
 @media screen and (min-width: 600px) {
 
-    body {
-        font-family: mc2;
-        background-color: #171717; 
-        color: white;
-        background-image: url(../images/space-export.png);
-        background-size: 100%;
     
-    }
     
     .grid {
         margin-top: 20px;
@@ -253,7 +524,7 @@ table, th, td {
     .promax {
         font-size: 12px;
         background-color: rgba(23,23,23,0.6);
-        color: white;
+        color: rgb(216, 216, 216);
     }
     
 
@@ -263,15 +534,26 @@ table, th, td {
         font-size: 25px;
         margin-top: 30px;
     }
-
-    .content2 {
-        grid-area: content2;
+    .content1 {
+        grid-area: content1;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
+        width: 550px;
+    }
+
+    .content2 {
+        grid-area: content2;
+        justify-self: center;
+        background-color: rgb(216, 216, 216);
+        border-radius: 12px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 550px;
     }
     
     
@@ -281,11 +563,12 @@ table, th, td {
     .content3 {
         grid-area: content3;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
+        width: 550px;
     }
     
     
@@ -294,11 +577,12 @@ table, th, td {
     .content4 {
         grid-area: content4;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
+        width: 550px;
     }
     
     
@@ -307,11 +591,12 @@ table, th, td {
     .content5 {
         grid-area: content5;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
+        width: 550px;
     }
     
     
@@ -320,25 +605,32 @@ table, th, td {
     .content6 {
         grid-area: content6;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 50px;
         margin-right: 50px;
+        width: 550px;
     }
+
+    table {
+        width: 550px;
+    }
+    .content1,.content2,.content3,.content4,.content5,.content6 {
+        font-size: 20px;
+    }
+    .modelframe {
+        width: 100%;
+        height: 200px;
+        border: 0px;
+    }
+
 }
 
 
 @media screen and (min-width: 1000px) {
 
-    body {
-        font-family: mc2;
-        background-color: #171717; 
-        color: white;
-        background-image: url(../images/space-export.png);
-        background-size: 100%;
     
-    }
     
     .grid {
         margin-top: 20px;
@@ -397,7 +689,7 @@ table, th, td {
     .promax {
         font-size: 12px;
         background-color: rgba(23,23,23,0.6);
-        color: white;
+        color: rgb(216, 216, 216);
     }
     
 
@@ -411,21 +703,23 @@ table, th, td {
     .content1 {
         grid-area: content1;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
     }
 
     .content2 {
         grid-area: content2;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
     }
     
     
@@ -435,11 +729,12 @@ table, th, td {
     .content3 {
         grid-area: content3;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
     }
     
     
@@ -448,11 +743,12 @@ table, th, td {
     .content4 {
         grid-area: content4;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
     }
     
     
@@ -461,11 +757,12 @@ table, th, td {
     .content5 {
         grid-area: content5;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
     }
     
     
@@ -474,11 +771,16 @@ table, th, td {
     .content6 {
         grid-area: content6;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
+        width: 600px;
+    }
+
+    table {
+        width: 600px;
     }
 
 }
@@ -487,14 +789,6 @@ table, th, td {
 
 @media screen and (min-width: 1300px) {
 
-    body {
-        font-family: mc2;
-        background-color: #171717; 
-        color: white;
-        background-image: url(../images/space-export.png);
-        background-size: 100%;
-    
-    }
     
     .grid {
         margin-top: 20px;
@@ -557,7 +851,7 @@ table, th, td {
     .promax {
         font-size: 12px;
         background-color: rgba(23,23,23,0.6);
-        color: white;
+        color: rgb(216, 216, 216);
     }
     
     
@@ -568,22 +862,17 @@ table, th, td {
     .content1 {
         grid-area: content1;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
     }
     
     .model1 {
         text-align: center;
     }
     
-    table, th, td {
-        border:1px solid #171717;
-        border-collapse: collapse;
-        text-align: center;
-        vertical-align: middle;
-      }
     
     .text1 {
         float: right;
@@ -595,10 +884,11 @@ table, th, td {
     .content2 {
         grid-area: content2;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
     }
     
     
@@ -608,10 +898,11 @@ table, th, td {
     .content3 {
         grid-area: content3;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
     }
     
     
@@ -620,10 +911,11 @@ table, th, td {
     .content4 {
         grid-area: content4;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
     }
     
     
@@ -632,10 +924,11 @@ table, th, td {
     .content5 {
         grid-area: content5;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
     }
     
     
@@ -644,10 +937,15 @@ table, th, td {
     .content6 {
         grid-area: content6;
         justify-self: center;
-        background-color: white;
+        background-color: rgb(216, 216, 216);
         border-radius: 12px;
         margin-top: 50px;
         width: 50%;
+        width: 800px;
+    }
+
+    table{
+        width: 800px;
     }
     
 

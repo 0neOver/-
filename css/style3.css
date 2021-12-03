@@ -1,0 +1,515 @@
+@font-face {
+    font-family: mc1;
+    src: url(../fonts/mc1.ttf);
+}
+
+@font-face {
+    font-family: mc2;
+    src: url(../fonts/mc2.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: mc2;
+    background-color: #171717; 
+    color: white;
+    background-image: url(../images/background.gif);
+    background-size: 100%;
+    transform: 0.9s;
+}
+
+.left:hover , .right:hover , .mid:hover { 
+    transform: scale(1.05);
+    transition: 0.9s;
+    box-shadow: 0px 0px 25px 3px white;
+}
+
+.left , .right , .mid { 
+    transition: 0.6s;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 250px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.navbar2{
+    color: rgb(216, 216, 216); 
+    margin-right: 10px; 
+}
+
+.aboutme{
+    text-decoration: none;
+}
+
+.mywork{
+    text-decoration: none;
+}
+
+.social{
+    text-decoration: underline;
+}
+
+.navbar2:hover {
+    color: rgb(167, 167, 167);
+}
+
+/*Phone*/
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas:
+    "header1 header1 header1"
+    "navbar navbar navbar"
+    "header2 header2 header2"
+    ". row1 ."
+    ". row2 ."
+    ". row3 ."
+    "madeby madeby madeby";
+}
+
+.header1 {
+    grid-area: header1;
+    font-size: 50px;
+    justify-self: center;
+}
+
+.header2 {
+    grid-area: header2;
+    justify-self: center;
+    margin-top: 15px;
+}
+
+.span2 {
+    font-size: 25px;
+    background-color: rgba(23,23,23,0.6);
+}
+
+.span1 {
+    margin-left: 50px;
+    margin-top: 100px;
+    background-color: rgba(23,23,23,0.6);
+    align-items: center;
+}
+
+.navbar {
+    grid-area: navbar;
+    justify-self: center;
+}
+
+.column-1 div { 
+    height: 100%;
+ }
+
+.row1 {
+    position: relative;
+    height: 200px;
+    grid-area: row1;
+    margin-top: 60px;
+}
+
+.row2 {
+    position: relative;
+    height: 200px;
+    grid-area: row2;
+    margin-top: 5px;
+}
+
+.row3 {
+    position: relative;
+    height: 200px;
+    grid-area: row3;
+    margin-top: 5px;
+}
+
+.column-1 {
+    width: 30%;
+}
+
+.left { 
+    background-color: rgb(216, 216, 216); 
+    float: left; 
+    border-radius: 12px;
+}
+    
+.mid { 
+    float: left; 
+    margin: 0 5%; 
+    background-color: rgb(216, 216, 216); 
+    border-radius: 12px;
+}
+    
+.right { 
+    background-color: rgb(216, 216, 216); 
+    float: right; 
+    border-radius: 12px;
+}
+
+.logo1 {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.span-row-1 {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: solid #171717 2px;
+    font-size: 13px;
+}
+
+.btn-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 15px;
+    padding: 10%;
+    color: black;
+    font-weight: bold;
+}
+
+.madeby {
+    grid-area: madeby;
+    justify-self: right;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.backmadeby {
+    font-size: 10px;
+    background-color: rgba(23,23,23,0.6);
+    color: rgba(179, 179, 179, 0.466);
+}
+
+.promax {
+    font-size: 12px;
+    background-color: rgba(23,23,23,0.6);
+    color: white;
+}
+
+
+@media screen and (min-width: 700px) {
+    .grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas:
+        "header1 header1 header1"
+        "navbar navbar navbar"
+        "header2 header2 header2"
+        ". row1 ."
+        ". row2 ."
+        ". row3 ."
+        "madeby madeby madeby";
+    }
+    
+    .header1 {
+        grid-area: header1;
+        font-size: 50px;
+        justify-self: center;
+        transition: 0.9s;
+    }
+    
+    .header2 {
+        grid-area: header2;
+        justify-self: center;
+        margin-top: 15px;
+        transition: 0.9s;
+    }
+    
+    .span2 {
+        font-size: 25px;
+        background-color: rgba(23,23,23,0.6);
+    }
+    
+    .span1 {
+        margin-left: 50px;
+        margin-top: 100px;
+        background-color: rgba(23,23,23,0.6);
+        align-items: center;
+    }
+    
+    .navbar {
+        grid-area: navbar;
+        justify-self: center;
+    }
+    
+    .column-1 div { 
+        height: 100%;
+     }
+    
+    .row1 {
+        position: relative;
+        height: 200px;
+        grid-area: row1;
+        margin-top: 60px;
+    }
+    
+    .row2 {
+        position: relative;
+        height: 200px;
+        grid-area: row2;
+        margin-top: 5px;
+    }
+    
+    .row3 {
+        position: relative;
+        height: 200px;
+        grid-area: row3;
+        margin-top: 5px;
+    }
+    
+    .column-1 {
+        width: 30%;
+    }
+    
+    .left { 
+        background-color: rgb(216, 216, 216); 
+        float: left; 
+        border-radius: 12px;
+    }
+        
+    .mid { 
+        float: left; 
+        margin: 0 5%; 
+        background-color: rgb(216, 216, 216); 
+        border-radius: 12px;
+    }
+        
+    .right { 
+        background-color: rgb(216, 216, 216); 
+        float: right; 
+        border-radius: 12px;
+    }
+    
+    .logo1 {
+        width: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        border-radius: 50%;
+    }
+    
+    .span-row-1 {
+        color: black;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        border-bottom: solid #171717 2px;
+        font-size: 13px;
+    }
+    
+    .btn-social {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        text-decoration: none;
+        font-size: 12px;
+        padding-top: 15px;
+        padding: 10%;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .madeby {
+        grid-area: madeby;
+        justify-self: right;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    
+    .backmadeby {
+        font-size: 10px;
+        background-color: rgba(23,23,23,0.6);
+        color: rgba(179, 179, 179, 0.466);
+    }
+    
+    .promax {
+        font-size: 12px;
+        background-color: rgba(23,23,23,0.6);
+        color: white;
+    }
+    
+}
+
+
+@media screen and (min-width: 1300px){
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1  1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header1 . navbar"
+    ". header2 ."
+    ". row1 ."
+    ". row2 ."
+    ". row3 ."
+    ". . madeby";
+}
+
+
+.header1 {
+    grid-area: header1;
+    font-size: 50px;
+    justify-self: left;
+}
+
+.header2 {
+    grid-area: header2;
+    justify-self: center;
+}
+
+.span2 {
+    font-size: 25px;
+    background-color: rgba(23,23,23,0.6);
+}
+
+.span1 {
+    margin-left: 50px;
+    margin-top: 100px;
+    background-color: rgba(23,23,23,0.6);
+    align-items: center;
+}
+
+.navbar {
+    grid-area: navbar;
+    justify-self: right;
+    margin-right: 50px;
+}
+
+.row1 div { height: 100%; }
+
+.row1 {
+    position: relative;
+    height: 200px;
+    grid-area: row1;
+    margin-top: 40px;
+}
+
+.row2 {
+    position: relative;
+    height: 200px;
+    grid-area: row2;
+    margin-top: 40px;
+}
+
+.row3 {
+    position: relative;
+    height: 200px;
+    grid-area: row3;
+    margin-top: 40px;
+}
+
+.column-1 {
+    width: 30%;
+}
+
+.left { 
+    background-color: rgb(216, 216, 216); 
+    float: left; 
+    border-radius: 12px;
+}
+    
+.mid { 
+    float: left; 
+    margin: 0 5%; 
+    background-color: rgb(216, 216, 216); 
+    border-radius: 12px;
+}
+    
+.right { 
+    background-color: rgb(216, 216, 216); 
+    float: right; 
+    border-radius: 12px;
+}
+
+.logo1 {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.span-row-1 {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: solid #171717 2px;
+}
+
+.btn-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    padding-top: 15px;
+    padding: 10%;
+    color: black;
+}
+
+.madeby {
+    grid-area: madeby;
+    justify-self: right;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.backmadeby {
+    font-size: 10px;
+    background-color: rgba(23,23,23,0.6);
+    color: rgba(179, 179, 179, 0.466);
+}
+
+.promax {
+    font-size: 12px;
+    background-color: rgba(23,23,23,0.6);
+    color: white;
+}
+}

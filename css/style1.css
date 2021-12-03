@@ -16,16 +16,81 @@
 body {
     font-family: mc2;
     background-color: #171717; 
-    color: white;
-    background-image: url(../images/space-export.png);
+    color: rgb(216, 216, 216);
+    background-image: url(../images/background.gif);
     background-size: 100%;
-
+    transition: 0.9s;
 }
+
+.content1:hover , .favmusik:hover , .tp-table:hover{ 
+    transform: scale(1.05);
+    transition: 0.9s;
+    box-shadow: 0px 0px 25px 3px white;
+}
+
+.content1, .favmusik, .tp-table { 
+    transition: 0.6s;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 250px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.navbar2{
+    color: rgb(216, 216, 216); 
+    margin-right: 10px; 
+}
+
+.aboutme{
+    text-decoration: underline;
+}
+
+.mywork{
+    text-decoration: none;
+}
+
+.social{
+    text-decoration: none;
+}
+
+.navbar2:hover {
+    color: rgb(167, 167, 167);
+}
+
+
+/*PHONE*/
+
+
 
 .grid {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 1fr 1 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "header1 header1 header1"
@@ -33,7 +98,9 @@ body {
     "header2 header2 header2"
     "content1 content1 content1"
     "header3 header3 header3"
-    "favmusik favmusik favmusik" 
+    "favmusik favmusik favmusik"
+    "header4 header4 header4"
+    ". texture-packs ." 
     "madeby madeby madeby";
 }
 
@@ -91,14 +158,14 @@ body {
 .content1 {
     grid-area: content1;
     font-size: 15px;
-    background-color: #fff;
+    background-color: rgb(216, 216, 216);
     color: black;
     border: 0px;
     border-radius: 12px;
     padding-left: 10px;
     padding-top: 10px;
     justify-self: center;
-    margin: 10px;
+    margin: 50px;
 }
 
 
@@ -116,7 +183,8 @@ body {
 
 .favmusik {
     grid-area: favmusik;
-    margin: 10px;
+    margin: 50px;
+    border-radius: 12px;
 
 }
 
@@ -145,25 +213,76 @@ body {
 .promax {
     font-size: 12px;
     background-color: rgba(23,23,23,0.6);
-    color: white;
+    color: rgb(216, 216, 216);
 }
+
+.header4 {
+    grid-area: header4;
+    margin-top: 50px;
+    font-size: 20px;
+    justify-self: center;
+}
+
+.span5 {
+    background-color: rgba(23,23,23,0.6);
+}
+
+.texture-packs {
+    grid-area: texture-packs;
+    padding: 0px;
+}
+
+.tp-logo {
+    width: 50px;
+    border-radius: 50%;
+    border: #171717 solid 2px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.tp-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: black;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.tp-table {
+    background-color: rgb(216, 216, 216);
+    margin-top: 20px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.tp-table-margin {
+    margin-top: 60px;
+}
+
+.btn-download {
+    color: #171717;
+    padding: 15px;
+    font-size: 12px;
+    width: 40px;
+}
+
+.btn-down {
+    width: 50px;
+}
+
+
+/*min 600px width screen*/
 
 
 @media screen and (min-width: 600px) {
 
-    body {
-        font-family: mc2;
-        background-color: #171717; 
-        color: white;
-        background-image: url(../images/space-export.png);
-        background-size: 100%;
-    
-    }
     
     .grid {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 150px 1fr 150px;
         grid-template-rows: 1fr 1 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "header1 header1 header1"
@@ -172,6 +291,8 @@ body {
         "content1 content1 content1"
         "header3 header3 header3"
         "favmusik favmusik favmusik" 
+        "header4 header4 header4"
+        ". texture-packs ."
         "madeby madeby madeby";
     }
     
@@ -229,7 +350,7 @@ body {
     .content1 {
         grid-area: content1;
         font-size: 15px;
-        background-color: #fff;
+        background-color: rgb(216, 216, 216);
         color: black;
         border: 0px;
         border-radius: 12px;
@@ -257,6 +378,7 @@ body {
         grid-area: favmusik;
         margin-left: 150px;
         margin-right: 150px;
+        border-radius: 12px;
     
     }
     
@@ -285,26 +407,81 @@ body {
     .promax {
         font-size: 12px;
         background-color: rgba(23,23,23,0.6);
-        color: white;
+        color: rgb(216, 216, 216);
     }
     
+    .header4 {
+        grid-area: header4;
+        margin-top: 50px;
+        font-size: 20px;
+        justify-self: center;
+    }
+    
+    .span5 {
+        background-color: rgba(23,23,23,0.6);
+    }
+    
+    .texture-packs {
+        grid-area: texture-packs;
+        padding: 0px;
+    }
+    
+    .tp-logo {
+        width: 50px;
+        border-radius: 50%;
+        border: #171717 solid 2px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    
+    .tp-name {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        color: black;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    
+    .tp-table {
+        background-color: rgb(216, 216, 216);
+        margin-top: 20px;
+        border-radius: 12px;
+        width: 100%;
+    }
+    
+    .tp-table-margin {
+        margin-top: 60px;
+    }
+    
+    .btn-download {
+        color: #171717;
+        padding: 15px;
+        font-size: 12px;
+        width: 40px;
+    }
+    
+    .btn-down {
+        width: 50px;
+    }
+    
+    
 }
+
+
+
+/*min 1000px width screen*/
+
+
 
 @media screen and (min-width: 1000px) {
 
-    body {
-        font-family: mc2;
-        background-color: #171717; 
-        color: white;
-        background-image: url(../images/space-export.png);
-        background-size: 100%;
-    
-    }
     
     .grid {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 300px 1fr 300px;
         grid-template-rows: 1fr 1 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "header1 header1 header1"
@@ -312,7 +489,9 @@ body {
         "header2 header2 header2"
         "content1 content1 content1"
         "header3 header3 header3"
-        "favmusik favmusik favmusik" 
+        "favmusik favmusik favmusik"
+        "header4 header4 header4"
+        ". texture-packs ."
         "madeby madeby madeby";
     }
     
@@ -370,7 +549,7 @@ body {
     .content1 {
         grid-area: content1;
         font-size: 15px;
-        background-color: #fff;
+        background-color: rgb(216, 216, 216);
         color: black;
         border: 0px;
         border-radius: 12px;
@@ -398,6 +577,7 @@ body {
         grid-area: favmusik;
         margin-left: 300px;
         margin-right: 300px;
+        border-radius: 12px;
     
     }
     
@@ -426,21 +606,74 @@ body {
     .promax {
         font-size: 12px;
         background-color: rgba(23,23,23,0.6);
-        color: white;
+        color: rgb(216, 216, 216);
+    }
+    
+    .header4 {
+        grid-area: header4;
+        margin-top: 50px;
+        font-size: 20px;
+        justify-self: center;
+    }
+    
+    .span5 {
+        background-color: rgba(23,23,23,0.6);
+    }
+    
+    .texture-packs {
+        grid-area: texture-packs;
+        padding: 0px;
+    }
+    
+    .tp-logo {
+        width: 50px;
+        border-radius: 50%;
+        border: #171717 solid 2px;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    
+    .tp-name {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        color: black;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    
+    .tp-table {
+        background-color: rgb(216, 216, 216);
+        margin-top: 20px;
+        border-radius: 12px;
+        width: 100%;
+    }
+    
+    .tp-table-margin {
+        margin-top: 60px;
+    }
+    
+    .btn-download {
+        color: #171717;
+        padding: 15px;
+        font-size: 12px;
+        width: 40px;
+    }
+    
+    .btn-down {
+        width: 50px;
     }
     
 }
 
+
+/*min 1300px width screen*/
+
+
+
 @media screen and (min-width: 1300px){
 
-body {
-    font-family: mc2;
-    background-color: #171717; 
-    color: white;
-    background-image: url(../images/space-export.png);
-    background-size: 100%;
-
-}
 
 .grid {
     margin-top: 20px;
@@ -454,6 +687,8 @@ body {
     ". workbutton ."
     ". header3 ."
     ". favmusik ." 
+    ". header4 ."
+    ". texture-packs ."
     ". . madeby";
 }
 
@@ -508,7 +743,7 @@ body {
 .content1 {
     grid-area: content1;
     font-size: 20px;
-    background-color: #fff;
+    background-color: rgb(216, 216, 216);
     color: black;
     border: 0px;
     border-radius: 12px;
@@ -534,6 +769,7 @@ body {
     grid-area: favmusik;
     margin-left: 0px;
     margin-right: 0px;
+    border-radius: 12px;
 }
 
 .spotify {
@@ -544,6 +780,59 @@ body {
     border-radius: 10px;
     transform: translateZ(0px);
     border: 0px;
+}
+
+.header4 {
+    grid-area: header4;
+    margin-top: 50px;
+    font-size: 25px;
+    justify-self: center;
+}
+
+.span5 {
+    background-color: rgba(23,23,23,0.6);
+}
+
+.texture-packs {
+    grid-area: texture-packs;
+}
+
+.tp-logo {
+    width: 100px;
+    border-radius: 50%;
+    border: #171717 solid 2px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.tp-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    color: black;
+    font-size: 17px;
+}
+
+.tp-table {
+    width: 100%;
+    background-color: rgb(216, 216, 216);
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.tp-table-margin {
+    margin-top: 60px;
+}
+
+.btn-download {
+    color: #171717;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.btn-down {
+    width: 100px;
 }
 
 .madeby {
@@ -562,7 +851,7 @@ body {
 .promax {
     font-size: 12px;
     background-color: rgba(23,23,23,0.6);
-    color: white;
+    color: rgb(216, 216, 216);
 }
     
 }

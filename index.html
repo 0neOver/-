@@ -9,19 +9,96 @@
     <title>About me</title>
 </head>
 <body>
+    <div class="loader"><img src="./images/loader.gif" alt="loading..."></div>
     <div class="grid">
-        <div class="header1" ><a class="span1" href="index.html" style="color: white; text-decoration: none;">OneOver</a></div>
+        <div class="header1" ><a class="span1" href="index.html" style="color: rgb(216, 216, 216); text-decoration: none;">OneOver</a></div>
         <div class="navbar">
-            <a class="navbar2" href="index.html" style="margin-right: 10px; color: white;">About me</a>
-            <a class="navbar2" href="work.html" style="margin-right: 10px; color: white; text-decoration: none;">My work</a>
-            <a class="navbar2" href="" style="margin-right: 10px; color: white; text-decoration: none;">Social</a>
+            <a class="navbar2 aboutme">About me</a>
+            <a class="navbar2 mywork" href="work.html">My work</a>
+            <a class="navbar2 social" href="social.html">Social</a>
         </div>
         <div class="header2"><span class="span2">About me</span></div>
         <div class="content1"><span class="span3">I'm a 15-year-old 3D-modeler based in Germany. I speak English and German and I've been doing 3D-models for about 1 Year now. I've been working at Cloaks+ as a cape verifier and cosmetic modler for four Months. Also I am doing 3D-model on order.</span></div>
         <div class="header3"><span class="span4">My  Playlist</span></div>
         <div class="favmusik"><iframe class="spotify" src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A42N7xR091OL4cyWwz81SRM" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
         <div class="madeby"><span class="backmadeby">Background made by </span><a class="promax" href="https://promax8.carrd.co/">PROMAX</a></div>
+        <div class="header4"><span class="span5">My favorite Texturepacks</span></div>
+        <div class="texture-packs">
+            <table class="tp-table tp-table-margin">
+                <tr>
+                    <td>
+                        <img src="./texturepack-logos/pack1.png" class="tp-logo">
+                    </td>
+                    <td>
+                        <span class="tp-name">ChocoMelky mashup pack v2</span>
+                    </td>
+                    <td class="btn-down">
+                        <a class="btn-download" href="./texturepacks/§cChoco§fMelky mashup pack v2.zip" download>DOWNLOAD</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="tp-table">
+                <tr>
+                    <td>
+                        <img src="./texturepack-logos/pack2.png" class="tp-logo">
+                    </td>
+                    <td>
+                        <span class="tp-name">Mai 1.8.9 [128x]</span>
+                    </td>
+                    <td class="btn-down">
+                        <a class="btn-download" href="./texturepacks/!       §c§LMai §f§L[128x].zip" download>DOWNLOAD</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="tp-table">
+                <tr>
+                    <td>
+                        <img src="./texturepack-logos/pack3.png" class="tp-logo">
+                    </td>
+                    <td>
+                        <span class="tp-name">1.8 AciDicBliTzz Short Sword Pack</span>
+                    </td>
+                    <td class="btn-down">
+                        <a class="btn-download" href="./texturepacks/1.8 AciDicBliTzz Short Sword Pack By TBNRnorton.zip" download>DOWNLOAD</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="tp-table">
+                <tr>
+                    <td>
+                        <img src="./texturepack-logos/pack4.png" class="tp-logo">
+                    </td>
+                    <td>
+                        <span class="tp-name">Wool-chan</span>
+                    </td>
+                    <td class="btn-down">
+                        <a class="btn-download" href="./texturepacks/!                     Wool-chan.zip" download>DOWNLOAD</a>
+                    </td>
+                </tr>
+            </table>
+            <table class="tp-table">
+                <tr>
+                    <td>
+                        <img src="./texturepack-logos/pack5.png" class="tp-logo">
+                    </td>
+                    <td>
+                        <span class="tp-name">breeZe v2 [32x]</span>
+                    </td>
+                    <td class="btn-down">
+                        <a class="btn-download" href="./texturepacks/§9breeZe v2 [32x]§f.zip" download>DOWNLOAD</a>
+                    </td>
+                </tr>
+            </table>
+            
+            
+        </div>
     </div>
+
+<script>
+    window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden";});
+</script>
 
 </body>
 </html>
